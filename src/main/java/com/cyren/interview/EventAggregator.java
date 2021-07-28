@@ -1,7 +1,6 @@
 package com.cyren.interview;
 
 import java.util.Collection;
-import java.util.InvalidPropertiesFormatException;
 import java.util.stream.Stream;
 
 public interface EventAggregator {
