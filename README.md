@@ -41,7 +41,7 @@ Contains static methods, which generate input and build expected output.
 Just for your convenience, shows usage of _Utility_, _EventAggregator_ and _EventAggregatorSupplier_.
 
 Example output of _main()_ method:
-```aidl
+```
 Input data
 ----------
 Event(id=id8, type=type2, timestamp=Mon Jan 18 11:27:17 IST 2021, message=Message8)
