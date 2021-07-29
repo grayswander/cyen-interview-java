@@ -1,6 +1,7 @@
 package com.cyren.interview;
 
 import lombok.SneakyThrows;
+import reactor.core.publisher.Flux;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -11,6 +12,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Utility {
+
+    public static Flux<Event> buildOrderedInputFlux() {
+        return Flux.fromStream(buildOrderedInputStream());
+    }
 
     public static List<Event> buildUnorderedInputList() {
         List<Event> eventList = buildOrderedInputStream().collect(Collectors.toList());

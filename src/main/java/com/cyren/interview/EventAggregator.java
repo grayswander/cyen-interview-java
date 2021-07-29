@@ -1,6 +1,9 @@
 package com.cyren.interview;
 
+import reactor.core.publisher.Flux;
+
 import java.util.Collection;
+import java.util.InvalidPropertiesFormatException;
 import java.util.stream.Stream;
 
 public interface EventAggregator {
@@ -20,4 +23,12 @@ public interface EventAggregator {
      * @return Stream of event aggregates
      */
     Stream<Aggregation> aggregateOrderedStream(Stream<Event> events, String periodFormat);
+
+    /**
+     * Aggregate reactive stream (Flux) of events, sorted by timestamp, by type and period.
+     * @param events Flux of events, sorted by timestamp.
+     * @param periodFormat Period format string in Simple Date Format. Ex. "yyyy-MM-dd hh" will aggregate by hour
+     * @return Flux of event aggergates
+     */
+    Flux<Aggregation> aggregateOrderedFlux(Flux<Event> events, String periodFormat);
 }

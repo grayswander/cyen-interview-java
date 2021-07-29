@@ -18,6 +18,9 @@ dependencies {
 
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    compile "io.projectreactor:reactor-core:3.4.8"
+    testCompile "io.projectreactor:reactor-test:3.4.8"
 }
 
 test {
